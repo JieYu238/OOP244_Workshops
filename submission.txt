@@ -1,0 +1,12 @@
+g++ -Wall -std=c++11 -g -o ws file1.cpp file2.cpp ...
+
+valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-origins=yes ws
+
+lab submission
+~mohammed.nooruddin/submit 244/w?/lab_ZRA
+
+reflection submission
+~mohammed.nooruddin/submit 244/w?/ref_ZRA
+
+To see all the options for submission issue the submit command with no arguments
+~mohammed.nooruddin/submit

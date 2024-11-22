@@ -1,0 +1,11 @@
+/********************************************************************************************************************************
+Name:   Jie Yu
+Student ID: 152519237
+Email:  jyu238@myseneca.ca
+Date:   20241012
+*********************************************************************************************************************************
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*********************************************************************************************************************************
+********************************************************************************************************************************/
+
+In this workshop, I learned how to use operator overloading in C++. First, I created several binary member operators that allow operations between two account objects. These operators make it possible to perform calculations and return the result in a way that can be used in further calculations. I also defined type conversion operators, which let me convert an account object to different types like `bool`, `int`, and `double`. This is helpful because it allows me to easily add the balances of two accounts using `double(account1) + double(account2)` without confusion. I also made a unary operator that checks if an account's number is zero, returning `true` or `false` when using `~acc[i]`. Moreover, I created helper operators outside the class to get the total balance of two accounts. Finally, I made an operator that allows converting between a simple type and an account, ensuring smooth interactions without causing confusion. These techniques made my code easier to understand and use.

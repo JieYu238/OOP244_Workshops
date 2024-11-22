@@ -1,0 +1,12 @@
+/********************************************************************************************************************************
+Name:   Jie Yu
+Student ID: 152519237
+Email:  jyu238@myseneca.ca
+Date:   20241102
+*********************************************************************************************************************************
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*********************************************************************************************************************************
+********************************************************************************************************************************/
+
+In this workshop, I worked on creating copy constructors and copy assignment operators, which are essential for managing how objects are copied. I learned that the copy constructor makes it easy to create a new object from an existing one. Using the copy assignment operator, I had to carefully handle self-assignment by checking if the object was copying itself, freeing old memory, and then deciding between shallow and deep copying.
+I also practiced resizing dynamically allocated memory, which taught me that it’s important to free old memory before reallocating to prevent memory leaks. Overloading the insertion (<<) and extraction (>>) operators was another key task. The insertion operator helped print the class content with ostream, while the extraction operator allowed easy reading with istream. This workshop reinforced my understanding of efficient memory use and the importance of making classes more user-friendly by overloading operators.

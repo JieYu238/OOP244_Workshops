@@ -1,0 +1,12 @@
+/***********************************************************************
+// OOP244 Workshop #1 : Lab tester program
+//
+// Name: Jie Yu
+// Student ID: 152519237
+// Email: jyu238@myseneca.ca
+// Date: 20240913
+// -----------------------------------------------------------
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+
+In this task, I learned how to properly create multiple modules from a single large file by dividing it into specific parts. This process required organizing functions and structures into separate files: file, movie, and utils modules, each with its own header (.h) and source (.cpp) files. I also learned the importance of the "One Definition Rule" to prevent issues caused by multiple definitions. A significant part of this task was understanding how to use compilation safeguards (#ifndef, #define, and #endif) in header files to prevent multiple inclusions, which keeps the code clean and error-free. Additionally, I practiced using the namespace seneca in all header and source files to encapsulate the code and avoid naming conflicts. Overall, this exercise helped me understand better code organization, modular programming, and techniques to maintain a well-structured C++ project.

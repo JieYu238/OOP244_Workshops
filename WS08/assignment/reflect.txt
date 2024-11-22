@@ -1,0 +1,11 @@
+/********************************************************************************************************************************
+Name:   Jie Yu
+Student ID: 152519237
+Email:  jyu238@myseneca.ca
+Date:   20241116
+*********************************************************************************************************************************
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*********************************************************************************************************************************
+********************************************************************************************************************************/
+
+In this workshop, I learned about pure virtual functions, abstract base classes, and the role of virtual functions in implementing class behavior. Pure virtual functions are functions without a defined behavior in the base class; they are meant to be overridden by derived classes. Abstract base classes, which contain at least one pure virtual function, provide a framework for derived classes but cannot be instantiated on their own. Derived classes then implement the behavior of these pure virtual functions, customizing it as needed. This flexibility allows each derived class to offer unique functionality while adhering to a common interface. Additionally, I discovered that abstract base classes do not need data members, as their main role is to define functions to be used by derived classes. In contrast, a concrete class is a class with all functions fully implemented and can be instantiated to create objects. This workshop helped me see how abstract base classes create a foundation for multiple classes to share a structure while enabling different implementations.

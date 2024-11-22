@@ -1,0 +1,14 @@
+/***********************************************************************
+// OOP244 Workshop #2 : Lab tester program
+// Name:        Jie Yu
+// Student ID:  152519237
+// Email:       jyu238@myseneca.ca
+// Date:        20240913
+/////////////////////////////////////////////////////////////////
+//I have done all the coding by myself and only copied the code that my professor provided 
+//to complete my workshops and assignments.
+***********************************************************************/
+
+In Workshop 2, I learned several key aspects of C++ programming that have significantly improved my understanding of the language. I practiced using `cin.getline()` for handling string inputs, which is important for reading multi-word strings correctly. This method lets you input entire lines, making it more effective for user data entry. I also learned about `cin.ignore()`, which clears the keyboard buffer and helps manage leftover input. This is essential to avoid problems caused by leftover characters affecting future reads.
+
+Additionally, I explored references in function prototypes. Using references allows functions to modify variables directly, which is more efficient than passing variables by value where only copies are changed. I also encountered dynamic memory allocation for the first time. While I’m still working on mastering this, understanding how to allocate and deallocate memory dynamically is crucial for managing resources in C++. I also learned the important distinction between `new` and `delete` for single objects and `new[]` and `delete[]` for arrays. This knowledge helps prevent memory management errors and makes my code more reliable. Overall, these practices have enhanced the readability and efficiency of my code, but I need more time to solidify my understanding and gain proficiency in dynamic memory management.

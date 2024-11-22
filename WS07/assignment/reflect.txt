@@ -1,0 +1,10 @@
+/********************************************************************************************************************************
+Name:   Jie Yu
+Student ID: 152519237
+Email:  jyu238@myseneca.ca
+Date:   20241109
+*********************************************************************************************************************************
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*********************************************************************************************************************************
+********************************************************************************************************************************/
+In this workshop, I learned how to inherit a derived class from a base class using the format `Class Professor : public Employee {}`. This allowed me to extend the functionality of the base class and add more specific features, like in the case of the `Professor` class inheriting from `Employee`. I also explored how to override a base class member function with a derived class member function. For example, when I needed to override a function in `Professor`, I could still access the base class version by using `Employee::read(istr)`, which allowed me to keep the base functionality while adding new behavior. Additionally, I implemented custom input/output operators for the derived class, making it easier to input and output class data, such as using `operator<<` to print `Professor` data or `operator>>` to read it. This approach simplified how I interacted with class objects and made managing more complex data structures more efficient.

@@ -1,0 +1,12 @@
+/********************************************************************************************************************************
+Name:   Jie Yu
+Student ID: 152519237
+Email:  jyu238@myseneca.ca
+Date:   20241005
+*********************************************************************************************************************************
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+********************************************************************************************************************************/
+
+In this workshop, I learned several important concepts related to object-oriented programming, especially about constructors and destructors. First, I understood the role of a default constructor, which initializes an object to an empty state when it is created. This step is crucial to avoid undefined behavior or broken objects. I also explored custom constructors that allow for flexibility in object creation. By overloading a class’s constructor, I can create different versions that take a varying number of arguments. For instance, calling Canister(20, 10, "Olive Oil") uses a three-argument constructor, while Canister() uses the no-argument constructor, and Canister(nullptr) selects the one-argument constructor. Additionally, I learned about the importance of a destructor, which cleans up resources when an object is no longer needed. It has the same name as the class, prefixed with a tilde (~). Lastly, I discovered how to use the this keyword to return a reference to the current object, which helps manage the state of an object more easily. For example, the clear function returns a reference to the current object, allowing for method chaining. Throughout this process, I encountered challenges with memory management, but overcoming these difficulties deepened my understanding of these key programming concepts.
+
+

@@ -1,0 +1,10 @@
+/////////////////////////////////////////////////////////////////
+// Name: Jie Yu
+// Email: jyu238@myseneca.ca
+// Student ID: 152519237
+// Date: 20240919
+/////////////////////////////////////////////////////////////////
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+***********************************************************************/
+
+In this workshop, I learned how to define a class called CC, which represents credit card. The class has data members that store important information, such as the card number, and it includes member functions that help manage this information. By default, the data members are private, meaning they cannot be accessed directly from outside the class. This is important for security. I also learned how to create an object of the CC class in the main function. Using member functions, I can query the state of the object, such as displaying the card number by display() public function, or modify it using set () public functions. A key takeaway was how to format the card number into four groups of digits. I discovered that converting the number to a string allows me to manage leading zeros effectively. In the prnNumber() function, I used a loop to ensure each group has four characters, which is essential for maintaining the correct format of the credit card number.
