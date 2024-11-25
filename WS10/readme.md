@@ -1,8 +1,9 @@
-﻿
-# Workshop #9: Derived Classes and Resources
+﻿# Workshop #10: Function Templates
 **Version 1.0**
 
-In this workshop, you will complete a derived class called `Transcript`, ensuring proper management of resources and implementing its functionality effectively. The `Transcript` class inherits from the fully developed `Marks` class.
+In this workshop, you will implement a module called `dynaCopy` containing three function templates. These templates are designed for dynamically copying arrays of objects and printing their contents.
+
+You will use a fully implemented class called `Name` and the `Utils` module provided to assist in completing this workshop.
 
 ---
 
@@ -10,13 +11,14 @@ In this workshop, you will complete a derived class called `Transcript`, ensurin
 
 Upon successful completion of this workshop, you will be able to:
 
-- Design and implement a constructor for a derived class with dynamic memory allocation.
-- Develop a copy constructor for a derived class, ensuring deep copying of resources.
-- Overload the copy assignment operator for a derived class while managing resource ownership.
-- Implement a destructor for a derived class with dynamically allocated resources.
-- Reflect on and describe your learning experience from completing this workshop.
+- Write and use function templates to generalize operations on different data types.
+- Dynamically manage arrays of objects using templates.
+- Understand and implement a header-only module for templates.
+- Test and validate template functionality using provided and self-written code.
+- Describe what you have learned in completing this workshop.
 
 ---
+
 
 ## Submission Policy and Instructions
 
@@ -146,142 +148,88 @@ Example:
 ```
 
 # Part 1 - LAB (100%)
-## Marks Module 
+## dynaCopy Module Requirements
+Implement the following three function templates in the `dynaCopy` module (header file only).
 
-The **Marks Module** is a fully implemented module that manages a collection of marks, each associated with a title (e.g., "Math: 85"). The module consists of two classes:
+### 1. **Two-Argument `dynaCopy`**
+**Description:**
+- This function template dynamically allocates memory for a new array and copies the elements from a given source array into it.
 
-1. **Mark Class**: Represents a single mark with a title and a score. It manages its own dynamic memory for the title string and provides functionality to set, retrieve, and copy marks.
+**Parameters:**
+1. A constant pointer to the source array. 
+   - This ensures the source array is not modified by the function.
+   - The type of elements in the source array is generic and determined by the template parameter.
+2. An integer representing the size of the source array.
+   - This indicates how many elements are in the source array.
 
-2. **Marks Class**: Represents a collection of `Mark` objects, dynamically managing their storage. It supports adding marks, accessing individual marks by index, and displaying the collection in a formatted manner.
-
-Students are **strongly encouraged** to carefully review the provided code for the `Marks` module to understand its design and implementation. This understanding will help when extending it in the derived `Transcript` class.
-
----
-
-### Unit Test for the Marks Module
-
-Below is a simple unit test to verify the functionality of the `Marks` module. Complete this test using the provided `Marks` module code:
-
-```cpp
-#include <iostream>
-#include "Marks.h"
-
-using namespace std;
-using namespace seneca;
-
-int main() {
-    // Step 1: Create a Marks object
-    Marks studentMarks;
-
-    // Step 2: Add some marks to the collection
-    studentMarks.addMark("Math", 85)
-                .addMark("Science", 92)
-                .addMark("History", 78);
-
-    // Step 3: Display the marks
-    cout << "Displaying Student Marks:" << endl;
-    cout << studentMarks << endl;
-
-    // Step 4: Verify index operator
-    cout << "Accessing Marks using the Index Operator:" << endl;
-    cout << "Mark 1: " << studentMarks[0].title() << ", " << studentMarks[0].mark() << endl;
-    cout << "Mark 2: " << studentMarks[1].title() << ", " << studentMarks[1].mark() << endl;
-
-    // Step 5: Copy the Marks object and display
-    Marks copiedMarks = studentMarks;
-    cout << "Displaying Copied Marks:" << endl;
-    cout << copiedMarks << endl;
-
-    return 0;
-}
-```
-### Expected Output
-
-```text
-Displaying Student Marks:
-Math                                                              85
-Science                                                           92
-History                                                           78
-
-Accessing Marks using the Index Operator:
-Mark 1: Math, 85
-Mark 2: Science, 92
-
-Displaying Copied Marks:
-Math                                                              85
-Science                                                           92
-History                                                           78
-```
-
-## Transcript Class
-
-The **Transcript** class extends the **Marks** class by introducing two additional attributes:
-
-1. **Student Name**: Dynamically allocated memory holds the student's name.
-2. **Student Number**: An unsigned integer representing the student's number.
+**Return Value:**
+- A pointer to a dynamically allocated array.
+  - The new array contains all the elements from the source array.
 
 ---
 
-### Requirements (your task)
+### 2. **Three-Argument `dynaCopy`**
+**Description:**
+- This function template dynamically reallocates memory for an existing destination array and copies the elements from a given source array into the destination.
+
+**Parameters:**
+1. A reference to a pointer representing the destination array.
+   - Since the destination pointer is passed by reference, the function can directly modify the memory it points to.
+   - If the destination pointer already points to allocated memory, that memory is first deallocated.
+   - The type of elements in the destination array is generic and determined by the template parameter.
+2. A constant pointer to the source array.
+   - This ensures the source array is not modified.
+   - The type of elements in the source array is generic and determined by the template parameter.
+3. An integer representing the size of the source array.
+   - This indicates how many elements need to be copied into the destination array.
+
+**Return Value:**
+- The same pointer passed as the destination, now pointing to newly allocated memory containing the copied elements.
 
 
-> **Note:**  
-You are encouraged to reuse the `Utils` module's methods for managing dynamic memory allocation (DMA) in your implementation.
+> **Hint:** The two `dynaCopy` function templates are conceptually similar to the two `alocpy` functions in the `Utils` module. However, instead of working exclusively with null-terminated character arrays, the `dynaCopy` templates are designed to handle arrays of any type, given their size.
 
-
-#### 1. Constructor
-- Create a two-argument constructor to initialize a `Transcript` object.
-- The constructor should:
-  - Dynamically allocate memory for the student's name.
-  - Set the student number.
 
 ---
 
-#### 2. Rule of Three
-- Implement the **copy constructor**, **copy assignment operator**, and **destructor** for the `Transcript` class.
+### 3. **`prnArray`**
+**Description:**
+- This function template prints the elements of an array to the standard output in a single line.
 
+**Parameters:**
+1. A constant pointer to the array to be printed.
+   - This ensures the array is not modified during the operation.
+   - The type of elements in the array is generic and determined by the template parameter.
+2. An integer representing the size of the array.
+   - This specifies how many elements need to be printed.
 
-**Instructions:**
+**Output Behavior:**
+- The elements are printed in order, separated by commas.
+- A newline character is added at the end of the output for readability.
 
-- **Copy Constructor:**
-  - When creating a copy of a `Transcript` object:
-    - Start by invoking the copy constructor of the `Marks` base class explicitly. This ensures that all attributes managed by `Marks` are properly copied into the new `Transcript` object.
-    - Copy the `Transcript`-specific attributes (e.g., dynamically allocate memory for the student name and copy its content, and directly copy the student number).
-
-- **Copy Assignment Operator:**
-  - For assignment:
-    - First, check for self-assignment to avoid unnecessary work and potential errors.
-    - Call the copy assignment operator of the `Marks` base class explicitly to copy its attributes.
-    - Properly manage the `Transcript`-specific resources:
-      - Free any existing memory allocated for the student name to prevent memory leaks.
-      - Allocate new memory for the student name and copy the content from the source object.
-      - Copy the student number directly.
-
-- **Destructor:**
-  - For destruction:
-    - Free any dynamically allocated memory in the `Transcript` class (e.g., the student name).
-    - The base class (`Marks`) destructor will automatically be invoked after the `Transcript` destructor finishes, cleaning up any resources managed by the base class.
+**Return Value:**
+- This function does not return a value. It simply performs the printing operation.
 
 ---
 
-#### 3. Override the Virtual `display` Function
-- Override the `display` function of the `Marks` class.
-- The `Transcript`'s `display` function should:
-  1. Print the student's name and student number in the following format:
+## Provided Code
 
-     ```
-     [Student Name] ([Student Number])
-     --------------------------------------------------------------------------
-     ```
+You are provided with:
 
-  2. Invoke the `display` function of the `Marks` base class to display all the marks.
+1. The `Name` class (implementation details included in the provided code).
+2. The `Utils` module for dynamic memory allocation support in the 'Name' class. (you do not need to use it)
+
+Review and understand these files before starting the workshop.
 
 ---
 
-### Notes for Students
-- **Focus on Proper Resource Management**: Ensure no memory leaks occur, and all dynamically allocated resources are safely freed in the destructor.
-- **Understand Inheritance and Overriding**: Carefully review how `Marks` works and how to extend its functionality in `Transcript`.
+### Additional Notes
 
+- **Memory Management:** Be mindful of dynamic memory allocation. Use proper techniques to avoid memory leaks. (deleting pointers before reallcoting memory)
+- **Utils Module:** The `Utils` module is used by the `Name` module for memroy management.
+- **Generalization:** The function templates should work seamlessly with primitive data types (e.g., `int`) and user-defined types (e.g., `Name`).
+
+---
 
 ## The tester program.
 [main.cpp](lab/main.cpp)
@@ -294,10 +242,9 @@ Files to submit:
 ```Text
 Utils.h
 Utils.cpp
-Marks.h
-Marks.cpp
-Transcript.h
-Transcript.cpp
+Name.h
+Name.cpp
+dynaCopy.h
 main.cpp
 ```
 ### Data Entry

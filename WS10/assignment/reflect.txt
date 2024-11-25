@@ -1,0 +1,13 @@
+/********************************************************************************************************************************
+Name:   Jie Yu
+Student ID: 152519237
+Email:  jyu238@myseneca.ca
+Date:   20241129
+*********************************************************************************************************************************
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*********************************************************************************************************************************
+********************************************************************************************************************************/
+
+In this workshop, I reviewed the concept of templates and how to use them in C++. Templates provide a way to achieve polymorphism by allowing functions or classes to operate with different data types. I learned that templates should only be defined in header files for proper compilation and linking. 
+
+I created a two-argument `dynaCopy` function template with two versions: a general implementation for `int` and `double` that directly copies elements without extra allocation, and a specialization for `char` to handle null-termination. I also developed a three-argument `dynaCopy` function template to update an existing destination array. It first deallocates the existing memory, uses the two-argument `dynaCopy` to copy data, and returns the updated array. Lastly, I implemented `prnArray` to print array elements using a loop, separating them with commas for readability. This workshop helped me understand templates better and apply them to dynamic memory operations.
