@@ -1,0 +1,11 @@
+/********************************************************************************************************************************
+Name:   Jie Yu
+Student ID: 152519237
+Email:  jyu238@myseneca.ca
+Date:   20241130
+*********************************************************************************************************************************
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*********************************************************************************************************************************
+********************************************************************************************************************************/
+
+In this workshop, I learned about the rule of three and how it applies to derived classes with dynamic memory. I reviewed techniques for dynamically allocating memory and understood the importance of explicitly calling the base class copy constructor in the derived class's initialization list. While overloading the copy assignment operator, I learned to avoid self-copying by checking object references. Additionally, I realized that the destructor of a derived class automatically calls the base class destructor, simplifying resource management. This workshop deepened my understanding of how to properly manage resource ownership and ensure safe copying and assignment in object-oriented programming.
